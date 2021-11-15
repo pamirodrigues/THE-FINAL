@@ -85,6 +85,7 @@ a {
   font-weight: 600;
   padding: 0.5rem 2rem;
   white-space: nowrap;
+  background: #fff;
 }
 
 .badge--primary {
@@ -96,7 +97,7 @@ a {
   color: #fff;
 }
 .badge--small {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 @media screen and (min-width: 1024px) {
   .badge {
@@ -104,6 +105,7 @@ a {
   }
   .badge--small {
     font-size: 1.2rem;
+    padding: 0.5rem 1.5rem;
   }
 }
 /*Lists*/
@@ -162,7 +164,6 @@ a {
   cursor: pointer;
   font-size: 1.8rem;
   font-weight: 600;
-
   padding: 2rem 3rem;
   text-align: center;
   text-transform: uppercase;
@@ -198,7 +199,7 @@ a {
   background: #db2c00;
 }
 .btn--block {
-  width: 100%;
+  width: 90%;
   display: inline-block;
 }
 
@@ -247,7 +248,7 @@ a {
 }
 .card__header,
 .card__body {
-  padding: 2rem 3rem;
+  padding: 2rem 2rem;
 }
 .card--primary .card__header {
   background: var(--color-primary);
@@ -256,4 +257,63 @@ a {
 .card--secondary .card__header {
   background: var(--color-secondary);
   color: #fff;
+}
+/*Plans*/
+
+.plan__name {
+  color: #fff;
+  font-weight: 500;
+  font-size: 2.4rem;
+  margin: 0;
+}
+.plan__price {
+  font-size: 6rem;
+}
+.plan__billing-cycle {
+  font-size: 2.4rem;
+  font-weight: 300;
+  opacity: 0.8;
+}
+.card--secondary .badge--secondary {
+  background: #02cdf1;
+}
+.plan__description {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+}
+.plan .list {
+  margin-top: 2rem;
+}
+.plan .list__item {
+  margin-bottom: 2rem;
+}
+.plan .btn {
+  margin: 0 0 2rem 2.2rem;
+}
+.plan--popular .card__header {
+  position: relative;
+}
+.plan--popular .card__header::before {
+  content: url(../Images/popular.svg);
+  width: 40px;
+  display: inline-block;
+  position: absolute;
+  top: -6px;
+  right: 5%;
+}
+@media screen and (min-width: 1024px) {
+  .plan__name {
+    font-size: 1.4rem;
+  }
+  .plan__price {
+    font-size: 5rem;
+  }
+  .plan__billing-cycle {
+    font-size: 1.6rem;
+  }
+  .plan__description {
+    font-size: 1.8rem;
+  }
 }
