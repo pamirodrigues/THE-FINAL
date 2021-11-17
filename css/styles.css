@@ -29,6 +29,7 @@ h1,
 h2,
 h3 {
   color: var(--color-headings);
+  line-height: 1.1;
   margin-bottom: 1rem;
 }
 h1 {
@@ -533,6 +534,7 @@ a {
   max-width: 1140px;
   margin: 0 auto;
 }
+/*Navegations/menu*/
 .nav {
   background: #000;
   display: flex;
@@ -581,5 +583,25 @@ a {
   }
   .nav__item {
     border: 0;
+  }
+}
+
+/*Hero*/
+.hero__tagline {
+  font-size: 2rem;
+  color: #b9c3cf;
+  letter-spacing: 1.2px;
+  margin: 2.3rem 0 5rem;
+}
+.hero__image {
+  width: 100%;
+}
+.hero {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+}
+@media screen and (min-width: 768px) {
+  .hero__content {
+    text-align: left;
+    align-self: center;
   }
 }
