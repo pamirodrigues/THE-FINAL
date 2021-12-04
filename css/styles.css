@@ -16,6 +16,10 @@
   --border-radius: 30px;
 }
 /*Typograph*/
+::selection {
+  background: var(--color-primary);
+  color: #fff;
+}
 html {
   font-size: 62.5%;
 }
@@ -40,6 +44,7 @@ h2 {
 }
 h3 {
   font-size: 3rem;
+  font-weight: 500;
 }
 p {
   margin-top: 0;
@@ -112,7 +117,6 @@ a {
 }
 /*Lists*/
 .list {
-  color: var(--color-headings);
   list-style: none;
   padding-left: 0;
 }
@@ -125,6 +129,7 @@ a {
 .list--tick {
   list-style-image: url(../Images/tick.svg);
   padding-left: 3rem;
+  color: var(--color-headings);
 }
 .list--tick .list__item {
   padding-left: 0.5rem;
@@ -362,6 +367,7 @@ a {
 /*media object*/
 .media {
   display: flex;
+  margin-bottom: 4rem;
 }
 .media__image {
   margin-top: 1rem;
@@ -508,7 +514,7 @@ a {
 .collapsible__heading {
   font-size: 3rem;
 }
-.collapsible__point {
+.collapsible__chevron {
   transform: rotate(-90deg);
   transition: 0.5s;
 }
@@ -518,7 +524,7 @@ a {
   transition: all 0.5s;
   opacity: 0;
 }
-.collapsible--expanded .collapsible__point {
+.collapsible--expanded .collapsible__chevron {
   transform: rotate(0);
 }
 .collapsible--expanded .collapsible__content {
@@ -540,17 +546,19 @@ a {
   color: #7b858b;
 }
 
-.block--darker .block__heading {
+.block--darker h1,
+.block--darker h2,
+.block--darker h3 {
   color: #fff;
 }
 
 .block--skewed-right {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
 }
 .block--skewed-left {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 }
 .container {
   max-width: 1140px;
@@ -618,9 +626,7 @@ a {
 .hero__image {
   width: 100%;
 }
-.hero {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
-}
+
 @media screen and (min-width: 768px) {
   .hero__content {
     align-self: center;
@@ -692,5 +698,19 @@ a {
 @media screen and (min-width: 768px) {
   .feature:nth-of-type(even) .feature__content {
     order: 2;
+  }
+}
+/*Block Showcase*/
+
+.block-showcase__image {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .block-showcase .grid {
+    grid-template-columns: 50% 50%;
+  }
+  .block-showcase__image {
+    width: auto;
   }
 }
