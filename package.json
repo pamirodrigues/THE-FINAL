@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/pamirodrigues/THE-FINAL#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.9.4"
+  },
+  "resolutions": {
+    "hoek": "4.2.1",
+    "webpack": "5.23.0"
   }
 }
